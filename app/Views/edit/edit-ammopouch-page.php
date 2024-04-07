@@ -3,7 +3,7 @@
         background-color: #999;
     }
 
-    .itempouch-item {
+    .ammopouch-item {
         height: 79px;
         width: 117px;
         border: 1px solid #000;
@@ -78,7 +78,7 @@
         echo '<div class="col">';
         for ($slot = 0; $slot < 10; $slot++) {
             $item = $slots[$slot];
-            echo '<div class="itempouch-item" data-id="' . htmlspecialchars($item['id'] ?? '') . '" data-quantity="' . htmlspecialchars($item['quantity'] ?? '') . '" data-slot="' . htmlspecialchars($item['slot'] ?? '') . '">';
+            echo '<div class="ammopouch-item" data-id="' . htmlspecialchars($item['id'] ?? '') . '" data-quantity="' . htmlspecialchars($item['quantity'] ?? '') . '" data-slot="' . htmlspecialchars($item['slot'] ?? '') . '">';
             echo '<img class="item-icon" src="/img/item/' . htmlspecialchars($item['icon'] ?? '') . htmlspecialchars($item['color'] ?? '') . '.png">';
             echo '<span style="font-size: 12px;"><b>[x' . htmlspecialchars($item['quantity'] ?? '') . ']</b><br>' . htmlspecialchars(implode(' ', preg_split('/(?=[A-Z])/', $item['name'] ?? '')), ENT_QUOTES, 'UTF-8') . '</span>';
             echo '</div>';
